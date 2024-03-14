@@ -1,0 +1,8 @@
+pyautogen
+openai
+pypdf
+chromadb
+whisper-mic
+pyttsx3
+IPython
+sentence_transformers

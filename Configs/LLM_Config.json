@@ -1,0 +1,37 @@
+{
+    "timeout": 60,
+    "cache_seed": 42,
+    "config_list": "",
+    "temperature": 0,
+    "functions": [
+        {
+            "name": "retrieve_content",
+            "description": "retrieve content for code generation and question answering.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "description": "Refined message which keeps the original meaning and can be used to retrieve content for code generation and question answering."
+                    }
+                },
+                "required": ["message"]
+            }
+        },
+        {
+            "name": "get_date_and_time",
+            "description": "Returns current date and/or time.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "date_part": {
+                        "type": "string",
+                        "enum": ["date", "time", "both"],
+                        "description": "Part of datetime teh function should return. 'date' for date only, 'time' for time only, 'both' for both. If not stated by user, use 'both'."
+                    }
+                },
+                "required": ["date_part"]
+            }
+        }
+    ]
+}
